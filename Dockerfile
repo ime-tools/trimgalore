@@ -32,7 +32,7 @@ RUN wget -O - https://github.com/FelixKrueger/TrimGalore/archive/0.4.5.tar.gz | 
 VOLUME /data
 WORKDIR /data
 
-ENTRYPOINT trim_galore
+ENTRYPOINT ["/usr/bin/trim_galore"]
 
 CMD ["--help"]
 
