@@ -26,7 +26,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
 
 RUN cd /opt && \
-    wget -O - https://github.com/FelixKrueger/TrimGalore/archive/0.4.4.tar.gz | tar xzf - && \
+    wget -O - https://github.com/FelixKrueger/TrimGalore/archive/0.4.5.tar.gz | tar xzf - && \
     ln -s $(find /opt -name "trim_galore") /usr/bin/
 
 VOLUME /data
