@@ -16,7 +16,7 @@ LABEL maintainer="frank.foerster@ime.fraunhofer.de" \
 
 RUN apt-get update && \
     apt-get --yes install \
-	cutadapt \
+	python-cutadapt \
 	fastqc \
 	wget \
 	tar \
