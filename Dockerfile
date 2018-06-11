@@ -25,12 +25,11 @@ RUN apt-get update && \
     && apt autoclean \
     && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
 
-RUN cd /opt && \
-    wget -O - https://github.com/FelixKrueger/TrimGalore/archive/0.4.5.tar.gz | tar xzf - && \
+WORKDIR /opt
+RUN wget -O - https://github.com/FelixKrueger/TrimGalore/archive/0.4.5.tar.gz | tar xzf - && \
     ln -s $(find /opt -name "trim_galore") /usr/bin/
 
 VOLUME /data
-
 WORKDIR /data
 
 ENTRYPOINT trim_galore
