@@ -14,7 +14,16 @@ LABEL maintainer="frank.foerster@ime.fraunhofer.de" \
       org.label-schema.build-date=${BUILD_DATE} \
       org.label-schema.vcs-url="https://github.com/ime-tools/trimgalore.git"
 
-RUN apt-get update && apt-get -y upgrade cutadapt fastqc wget tar gzip
+RUN apt-get update && \
+    apt-get --yes install \
+	cutadapt \
+	fastqc \
+	wget \
+	tar \
+	gzip && \
+    apt --yes autoremove \
+    && apt autoclean \
+    && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
 
 RUN cd /opt && \
     wget -O - https://github.com/FelixKrueger/TrimGalore/archive/0.4.4.tar.gz | tar xzf - && \
