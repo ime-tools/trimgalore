@@ -18,13 +18,22 @@ RUN apt-get update && \
     apt-get --yes install \
 	python-cutadapt \
 	libfindbin-libs-perl \
-	fastqc \
+	openjdk-8-jre-headless \
+	unzip \
+	parallel \
 	wget \
 	tar \
 	gzip && \
     apt --yes autoremove \
     && apt autoclean \
     && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
+
+WORKDIR /opt
+RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.7.zip && \
+    unzip fastqc_v0.11.7.zip && \
+    rm -rf fastqc_v0.11.7.zip && \
+    chmod +x FastQC/fastqc
+ENV PATH "${PATH}":/opt/FastQC/
 
 WORKDIR /opt
 RUN wget -O - https://github.com/FelixKrueger/TrimGalore/archive/0.4.5.tar.gz | tar xzf - && \

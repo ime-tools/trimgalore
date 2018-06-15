@@ -2,14 +2,14 @@
 
 ## Latest release
 
-The latest release is v0.4.5. Be warned, that `trimgalore` itself will report `v0.4.4_dev`, but that is an error in the `trimgalore` release and already reported.
+The latest release is v0.4.5.1. Be warned, that `trimgalore` itself will report `v0.4.4_dev`, but that is an error in the `trimgalore` release and already reported.
 
 ## Docker images
 
-### Based on last Release (v0.4.5):
-- [![](https://images.microbadger.com/badges/image/imetools/trimgalore:v0.4.5.svg)](https://microbadger.com/images/imetools/trimgalore:v0.4.5 "Get your own image badge on microbadger.com")
-- [![](https://images.microbadger.com/badges/version/imetools/trimgalore:v0.4.5.svg)](https://microbadger.com/images/imetools/trimgalore:v0.4.5 "Get your own version badge on microbadger.com")
-- [![](https://images.microbadger.com/badges/commit/imetools/trimgalore:v0.4.5.svg)](https://microbadger.com/images/imetools/trimgalore:v0.4.5 "Get your own commit badge on microbadger.com")
+### Based on last Release (v0.4.5.1):
+- [![](https://images.microbadger.com/badges/image/imetools/trimgalore:v0.4.5.1.svg)](https://microbadger.com/images/imetools/trimgalore:v0.4.5.1 "Get your own image badge on microbadger.com")
+- [![](https://images.microbadger.com/badges/version/imetools/trimgalore:v0.4.5.1.svg)](https://microbadger.com/images/imetools/trimgalore:v0.4.5.1 "Get your own version badge on microbadger.com")
+- [![](https://images.microbadger.com/badges/commit/imetools/trimgalore:v0.4.5.1.svg)](https://microbadger.com/images/imetools/trimgalore:v0.4.5.1 "Get your own commit badge on microbadger.com")
 
 ### Latest image:
 - [![](https://images.microbadger.com/badges/image/imetools/trimgalore.svg)](https://microbadger.com/images/imetools/trimgalore "Get your own image badge on microbadger.com")
@@ -85,6 +85,10 @@ This repository is created and maintained by Frank Förster.
 
 ## Changelog
 
+- `v0.4.5.1` Adding parallel and new FastQC to image
+   - trimgalore v0.4.5 (selfreporting as v0.4.4_dev)
+   - FastQC v0.11.7
+   - GNU parallel 20141022
 - `v0.4.5` First official release of the image. It includes
    - trimgalore v0.4.5 (selfreporting as v0.4.4_dev)
    - FastQC v0.11.4
