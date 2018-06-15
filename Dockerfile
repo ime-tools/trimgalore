@@ -19,6 +19,7 @@ RUN apt-get update && \
 	python-cutadapt \
 	libfindbin-libs-perl \
 	openjdk-8-jre-headless \
+	unzip \
 	parallel \
 	wget \
 	tar \
