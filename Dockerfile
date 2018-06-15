@@ -17,6 +17,7 @@ LABEL maintainer="frank.foerster@ime.fraunhofer.de" \
 RUN apt-get update && \
     apt-get --yes install \
 	python-cutadapt \
+	libfindbin-libs-perl \
 	fastqc \
 	wget \
 	tar \
